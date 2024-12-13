@@ -15,7 +15,8 @@ const App = () => {
 			<p>Username: {USERS[userAccount].username}</p>
 			<p>Email: {USERS[userAccount].email}</p>
 			<button
-				disabled={userAccount === 0}
+				// disabled={userAccount === 0}
+				disabled={!userAccount}
 				onClick={() => {
 					if (userAccount > 0) {
 						setUserAccount(userAccount - 1);
