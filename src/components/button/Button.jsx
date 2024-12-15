@@ -1,8 +1,36 @@
+// import { USERS } from '../../constants/infoUsers';
 import { StyledButton } from './button.styles';
 
-const Button = ({ color, children }) => {
-	console.log(color);
-	return <StyledButton color={color}>{children}</StyledButton>;
+const MyButton = ({
+	// disabled,
+	direction,
+	USERS,
+	userAccount,
+	setUserAccount,
+	children
+}) => {
+	// console.log(color);
+	const disabledOption =
+		(direction === 'Previous' && userAccount === 0) ||
+		(direction === 'Next' && userAccount === USERS.length - 1);
+	return (
+		<StyledButton
+			disabled={disabledOption}
+			onClick={() => {
+				if (direction === 'Previous' && userAccount > 0) {
+					setUserAccount(userAccount - 1);
+				} else if (direction === 'Next' && userAccount <= USERS.length - 1) {
+					setUserAccount(userAccount + 1);
+				}
+			}}
+		>
+			{children}
+		</StyledButton>
+	);
 };
 
-export default Button;
+export default MyButton;
+
+// const disabledOption =
+// 	(direction === 'Previous' && userAccount > 0) ||
+// 	(direction === 'Next' && userAccount <= USERS.length - 1);

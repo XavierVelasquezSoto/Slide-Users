@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledButton = styled.button`
-	background-color: ${({ color }) => color};
+	/* background-color: ${({ color }) => color};
 	color: white;
 	border: none;
 	padding: 0.5rem;
@@ -14,7 +14,7 @@ const StyledButton = styled.button`
 		&:hover {
 			scale: 0.8;
 		}
-	}
+	} */
 `;
 
 export { StyledButton };
