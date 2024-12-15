@@ -15,6 +15,7 @@ const MyButton = ({
 		(direction === 'Next' && userAccount === USERS.length - 1);
 	return (
 		<StyledButton
+			// disabled={disabled}
 			disabled={disabledOption}
 			onClick={() => {
 				if (direction === 'Previous' && userAccount > 0) {

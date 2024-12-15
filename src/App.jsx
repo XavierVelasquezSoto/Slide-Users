@@ -18,7 +18,7 @@ const App = () => {
 			<p>Username: {USERS[userAccount].username}</p>
 			<p>Email: {USERS[userAccount].email}</p>
 			<MyButton
-				// disabled={!userAccount}
+				// disabled={!userAccount} // disabled={userAccount === 0}
 				direction='Previous'
 				USERS={USERS}
 				userAccount={userAccount}
@@ -27,7 +27,7 @@ const App = () => {
 				Previous
 			</MyButton>
 			<MyButton
-				// disabled={userAccount === USERS.length - 1}
+				// disabled={userAccount === USERS.length - 1}  //disabled={userAccount <= USERS.length - 1}
 				direction='Next'
 				USERS={USERS}
 				userAccount={userAccount}
