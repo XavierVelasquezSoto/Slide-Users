@@ -20,7 +20,7 @@ const MyButton = ({
 			onClick={() => {
 				if (direction === 'Previous' && userAccount > 0) {
 					setUserAccount(userAccount - 1);
-				} else if (direction === 'Next' && userAccount <= USERS.length - 1) {
+				} else if (direction === 'Next' && userAccount < USERS.length - 1) {
 					setUserAccount(userAccount + 1);
 				}
 			}}
